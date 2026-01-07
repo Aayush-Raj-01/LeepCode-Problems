@@ -1,6 +1,6 @@
 #include <limits.h>
 int reverse(int x){
-    int yx=0,re=0,n=0;
+    int re=0,n;
   
     while(x!=0){
         n = x%10;
