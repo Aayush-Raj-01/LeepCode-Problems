@@ -1,20 +1,18 @@
 class Solution {
 public:
     bool checkPerfectNumber(int num) {
-        int dvd,sum=0,i=1;
+        if (num == 1) return false;
+        int dvd,sum=1,i=2;
         vector<int> sq;
-        while(num/2 >= i){
+        while(num >= i*i){
             dvd = num%i;
             if(dvd == 0){
-                sq.push_back(i);
+               sum+=i;
+               if(i!=num/i)sum+= num/i;
             }
             i++;
         }
-        for(int j=0; j<sq.size();j++){
-            sum += sq[j];
-        }
-        if(sum == num) return true;
-        return false;
+        return sum==num;
         
     }
 };
