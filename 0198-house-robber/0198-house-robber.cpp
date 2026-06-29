@@ -1,23 +1,16 @@
 class Solution {
 public:
-
-    int love(int n,vector<int>& nums,vector<int>& dp){
-        if(n==1){
-            return nums[0] > nums[1] ? nums[0] : nums[1];   
-        }
-        else if(n==0) return nums[0];
-        else if(n < 0) return 0;
-        if(dp[n] != -1) return dp[n];
-
-        int rob = nums[n] + love(n-2,nums,dp);
-        int skip = love(n-1,nums,dp);
-        dp[n] = max(rob,skip);
-
-        return dp[n];
-    }
     int rob(vector<int>& nums) {
-        vector<int> dp (nums.size(),-1);
-        int n = nums.size()-1;
-        return love(n,nums,dp);
+        int n = nums.size();
+        if(nums.empty()) return 0 ;
+        int prev2 = nums[0];
+        if(nums.size() == 1) return nums[0];
+        int prev1 = max(nums[0], nums[1]);
+        for(int i = 2 ; i < n ; i++){
+            int cur = max(nums[i]+prev2,prev1);
+            prev2 = prev1;
+            prev1 = cur;
+        }
+        return prev1;
     }
 };
