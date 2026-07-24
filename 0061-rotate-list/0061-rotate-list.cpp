@@ -35,9 +35,7 @@ public:
         while(temp != NULL && temp->next != NULL){
             temp = temp->next;
         }
-        if(temp != NULL)
         temp->next = head;
-        else temp = head;
         return temp1;
     }
 };
