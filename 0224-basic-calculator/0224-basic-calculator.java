@@ -30,6 +30,7 @@ class Solution {
                 number = 0;
                 sign = -1;
             }
+            
             else if(c != ' '){
                 number = number*10 + (c - '0');
             }
