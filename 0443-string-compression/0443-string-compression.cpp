@@ -1,13 +1,13 @@
 class Solution {
 public:
     int compress(vector<char>& chars) {
-        char t = chars[0], write;
+        char t = chars[0];
         int count = 0, totalcount = 0, posi = 0;
         for (char read : chars) {
             if (t == read) {
                 count++;
             } else {
-                chars[posi] = write;
+                chars[posi] = t;
                 if (chars.size() > posi + 1 && count > 1) {
                     if (count <= 9) {
                         chars[posi + 1] = count + '0';
@@ -28,7 +28,6 @@ public:
                 count = 1;
             }
             t = read;
-            write = read;
         }
         chars[posi] = t;
 
