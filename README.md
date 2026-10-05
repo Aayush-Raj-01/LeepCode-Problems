@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0678-valid-parenthesis-string](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/master/0678-valid-parenthesis-string) |
+| [0856-score-of-parentheses](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/master/0856-score-of-parentheses) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -15,6 +16,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0678-valid-parenthesis-string](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/master/0678-valid-parenthesis-string) |
+| [0856-score-of-parentheses](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/master/0856-score-of-parentheses) |
 ## Greedy
 |  |
 | ------- |
@@ -23,4 +25,5 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0678-valid-parenthesis-string](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/master/0678-valid-parenthesis-string) |
+| [0856-score-of-parentheses](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/master/0856-score-of-parentheses) |
 <!---LeetCode Topics End-->
