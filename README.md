@@ -42,4 +42,12 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0142-linked-list-cycle-ii](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/main/0142-linked-list-cycle-ii/) | Medium |
+## Array
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0046-permutations](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/main/0046-permutations/) | Medium |
+## Backtracking
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [0046-permutations](https://github.com/Aayush-Raj-01/LeepCode-Problems/tree/main/0046-permutations/) | Medium |
 <!---LeetCode Topics End-->
