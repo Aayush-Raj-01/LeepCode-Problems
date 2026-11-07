@@ -1,24 +1,41 @@
 class Solution {
 public:
-    void dfs(vector<vector<char>> &grid, int row , int col){
-        if(grid[row][col]=='2') return;
-        grid[row][col] = '2';
-        if(row-1 != -1 && grid[row-1][col] == '1') dfs(grid, row -1,col); 
-        if(col-1 != -1 && grid[row][col-1] == '1') dfs(grid, row,col-1);
-        if(row+1 != grid.size() && grid[row+1][col] == '1') dfs(grid, row+1,col); 
-        if(col+1 != grid[0].size() && grid[row][col+1] == '1') dfs(grid, row,col+1); 
-    }
     int numIslands(vector<vector<char>>& grid) {
-        int ans=0;
-        for(int i = 0 ; i < grid.size() ; i++){
+        int ans = 0;
+        for(int i = 0 ; i < grid.size();i++){
             for(int j = 0 ; j < grid[0].size();j++){
-                if(grid[i][j] == '1'){
-                dfs(grid , i , j);
-                ans++;
+                if(grid[i][j]=='1'){
+                    ans++;
+                    queue<pair<int,int>> q;
+                    q.push({i,j});
+
+                    grid[i][j] = '0';
+
+                    while(!q.empty()){
+                        int r = q.front().first;
+                        int c = q.front().second;
+                        q.pop();
+
+                        if(r-1 >= 0 && grid[r-1][c] == '1'){
+                            grid[r-1][c] = '0';
+                            q.push({r-1,c});
+                        }
+                        if(r+1 < grid.size() && grid[r+1][c] == '1'){
+                            grid[r+1][c] = '0';
+                            q.push({r+1,c});
+                        }
+                        if(c-1 >= 0 && grid[r][c-1] == '1'){
+                            grid[r][c-1] = '0';
+                            q.push({r,c-1});
+                        }
+                        if(c+1 < grid[0].size() && grid[r][c+1] == '1'){
+                            grid[r][c+1] = '0';
+                            q.push({r,c+1});
+                        }
+                    }
                 }
             }
         }
         return ans;
-        
     }
 };
